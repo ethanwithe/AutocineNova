@@ -1,20 +1,25 @@
 package com.autocinema.pe.Controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import com.autocinema.pe.entity.Funciones;
 import com.autocinema.pe.service.FuncionesService;
 import com.autocinema.pe.service.PeliculaService;
 import com.autocinema.pe.service.SalaService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/funciones")
 
 public class FuncionesController {
-	
+
 	@Autowired
     private FuncionesService funcionesService;
 

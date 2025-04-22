@@ -11,13 +11,13 @@ import jakarta.persistence.Table;
 @Table(name = "metodo_pago")
 public class MetodoPago {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+
     @Column(name = "id_metodos_pago")
     private Long id;
-    
+
     @Column(name = "metodo")
     private String metodo;
-    
+
 
 	public MetodoPago() {
 		super();
@@ -55,6 +55,6 @@ public class MetodoPago {
 	public String toString() {
 		return "MetodoPago [id=" + id + ", metodo=" + metodo + "]";
 	}
-    
-    
+
+
 }

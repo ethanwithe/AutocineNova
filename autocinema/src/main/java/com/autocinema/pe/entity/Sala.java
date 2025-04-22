@@ -1,6 +1,11 @@
 package com.autocinema.pe.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "sala")
@@ -8,14 +13,14 @@ public class Sala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "capacidad")
     private Integer capacidad;
     @Column(name = "sede_id")
     private Integer sede_id;
-    
+
 	public Sala() {
 		super();
 	}
@@ -65,6 +70,6 @@ public class Sala {
 		return "Sala [id=" + id + ", nombre=" + nombre + ", capacidad=" + capacidad + ", sede_id=" + sede_id + "]";
 	}
 
-	
-    
+
+
 }

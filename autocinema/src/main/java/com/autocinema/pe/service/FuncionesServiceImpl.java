@@ -1,8 +1,10 @@
 package com.autocinema.pe.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.autocinema.pe.entity.Funciones;
 import com.autocinema.pe.repository.FuncionesRepository;
 
@@ -11,8 +13,8 @@ public class FuncionesServiceImpl  implements FuncionesService{
 
 	@Autowired
 	private FuncionesRepository funcionesRepository;
-	
-	
+
+
 	@Override
 	public List<Funciones> listarFunciones() {
 		// TODO Auto-generated method stub
@@ -40,5 +42,5 @@ public class FuncionesServiceImpl  implements FuncionesService{
 	public void eliminarFunciones(Long id) {
 		funcionesRepository.deleteById(id);
 	}
-	
+
 }

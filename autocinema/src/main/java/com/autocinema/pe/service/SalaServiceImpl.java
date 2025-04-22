@@ -1,8 +1,10 @@
 package com.autocinema.pe.service;
 
-import org.springframework.stereotype.Service;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.autocinema.pe.entity.Sala;
 import com.autocinema.pe.repository.SalaRepository;
 

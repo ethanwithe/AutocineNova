@@ -13,21 +13,21 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="funciones")
 public class Funciones {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Long id;
-	
+
 	@Column(name = "fecha")
 	private Date fecha;
-	
+
 	@Column(name = "hora")
 	private Time hora;
 
 	@Column(name = "pelicula_id")
 	private Integer pelicula;
-	
+
 	@Column(name = "sala_id")
 	private Integer sala;
 
@@ -89,8 +89,8 @@ public class Funciones {
 		return "Funciones [id=" + id + ", fecha=" + fecha + ", hora=" + hora + ", pelicula=" + pelicula + ", sala="
 				+ sala + "]";
 	}
-	
-	
-	
+
+
+
 
 }

@@ -78,7 +78,7 @@
     <h1 class="text-center mb-4">Gestión de Categorías</h1>
 
     <!-- Formulario -->
-    <form th:action="@{/categorias/guardar}" method="post" th:object="${categoria}" class="mb-4">
+    <form th:action="@{views/categorias/guardar}" method="post" th:object="${categoria}" class="mb-4">
         <input type="hidden" th:field="*{id}"/>
         <div class="mb-3">
             <label class="form-label">Nombre</label>
@@ -101,8 +101,8 @@
                 <td th:text="${cat.id}"></td>
                 <td th:text="${cat.nombre}"></td>
                 <td>
-                    <a th:href="@{'/categorias/editar/' + ${cat.id}}" class="btn btn-warning btn-sm">Editar</a>
-                    <a th:href="@{'/categorias/eliminar/' + ${cat.id}}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
+                    <a th:href="@{'views/categorias/editar/' + ${cat.id}}" class="btn btn-warning btn-sm">Editar</a>
+                    <a th:href="@{'views/categorias/eliminar/' + ${cat.id}}" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</a>
                 </td>
             </tr>
         </tbody>

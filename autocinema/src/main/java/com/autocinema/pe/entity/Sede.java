@@ -11,17 +11,17 @@ import jakarta.persistence.Table;
 @Table(name = "sede")
 public class Sede {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+
     @Column(name = "id")
     private Long id;
-    
+
     @Column(name = "nombre")
     private String nombre;
-    
+
     @Column(name = "direccion")
     private String direccion;
-    
-    
+
+
 
 	public Sede() {
 		super();
@@ -78,5 +78,5 @@ public class Sede {
 	public String toString() {
 		return "Sede [id=" + id + ", nombre=" + nombre + ", direccion=" + direccion + "]";
 	}
-	
+
 }

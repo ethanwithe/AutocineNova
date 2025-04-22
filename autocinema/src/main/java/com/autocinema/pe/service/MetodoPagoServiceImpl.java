@@ -1,8 +1,10 @@
 package com.autocinema.pe.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import com.autocinema.pe.entity.MetodoPago;
 import com.autocinema.pe.repository.MetodoPagoRepository;
 
@@ -32,6 +34,6 @@ public class MetodoPagoServiceImpl implements MetodoPagoService {
         mtd.setId(metodo.getId());
         mtd.setMetodo(metodo.getMetodo());
         metodoPagoRepository.save(mtd);
-		
+
 	}
 }

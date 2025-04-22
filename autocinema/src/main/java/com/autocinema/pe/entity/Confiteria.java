@@ -1,23 +1,28 @@
 package com.autocinema.pe.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "confiteria")
 public class Confiteria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
+
     @Column(name = "id_confiteria")
     private Long id;
-    
+
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "precio")
     private Double precio;
     @Column(name = "descripcion")
     private String descripcion;
-    
+
 	public Confiteria() {
 		super();
 	}
@@ -67,7 +72,7 @@ public class Confiteria {
 		return "Confiteria [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", descripcion=" + descripcion
 				+ "]";
 	}
-    
-    
-    
+
+
+
 }
