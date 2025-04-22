@@ -1,24 +1,19 @@
 package com.autocinema.pe.Controller;
 
-import java.util.List;
-
+import com.autocinema.pe.entity.Sala;
+import com.autocinema.pe.service.SalaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
-import com.autocinema.pe.entity.Sala;
-import com.autocinema.pe.service.SalaService;
+import java.util.List;
 
 @Controller
 @RequestMapping("/salas")
 
 public class SalaController {
-
+	
 	@Autowired
     private SalaService salaService;
 

@@ -9,23 +9,23 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "pelicula")
-public class Pelicula {
-
+public class Pelicula {	
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_Pelicula")
+    @Column(name = "id")
     private Long id;
-
+	
 	@Column(name = "titulo")
     private String titulo;
 
 	@Column(name = "descripcion")
     private String descripcion;
-
+	
 	@Column(name = "duracion")
     private Integer duracion;
-
-	@Column(name = "categoria")
+	
+	@Column(name = "categoria_id")
     private Integer categoria_id;
 
 	public Pelicula() {
@@ -88,6 +88,6 @@ public class Pelicula {
 		return "Pelicula [id=" + id + ", titulo=" + titulo + ", descripcion=" + descripcion + ", duracion=" + duracion
 				+ ", categoria_id=" + categoria_id + "]";
 	}
-
-
+	
+	
 }

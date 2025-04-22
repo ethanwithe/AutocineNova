@@ -1,22 +1,17 @@
 package com.autocinema.pe.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "estacionamiento")
 public class Estacionamiento {
-
+	
 	    @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+	    
 	    @Column(name = "id")
 	    private Long id;
-
+	    
 	    @Column(name = "numero_espacio")
 	    private Integer numero_espacio;
 	    @Column(name = "sede_id")
@@ -27,12 +22,12 @@ public class Estacionamiento {
 	    private Integer funcion_id;
 	    @Column(name = "reservado")
 	    private Boolean reservado;
-
+	    
 		public Estacionamiento() {
 			super();
 		}
 
-
+		
 		public Estacionamiento(Long id, Integer numero_espacio, Integer sede_id, Integer usuario_id, Integer funcion_id,
 				Boolean reservado) {
 			super();
@@ -110,6 +105,6 @@ public class Estacionamiento {
 			return "Estacionamiento [id=" + id + ", numero_espacio=" + numero_espacio + ", sede_id=" + sede_id
 					+ ", usuario_id=" + usuario_id + ", funcion_id=" + funcion_id + ", reservado=" + reservado + "]";
 		}
-
+  
 
 }

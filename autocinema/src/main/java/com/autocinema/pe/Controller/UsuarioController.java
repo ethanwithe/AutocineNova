@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.autocinema.pe.entity.Usuario;
 import com.autocinema.pe.service.UsuarioService;
 
@@ -25,9 +24,9 @@ public class UsuarioController {
 	    @GetMapping
 	    public String listarUsuario(Model model) {
 	        List<Usuario> lista = usuarioService.listarUsuario();
-	        model.addAttribute("listaUsuario", lista);
-	        model.addAttribute("usuario", new Usuario());
-	        return "usuarios";
+	        model.addAttribute("listaUsuario", lista); 
+	        model.addAttribute("usuario", new Usuario()); 
+	        return "usuarios"; 
 	    }
 
 	    // Guardar o actualizar usuario

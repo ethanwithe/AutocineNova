@@ -10,5 +10,5 @@ public interface FuncionesService {
 	void crearActualizarFunciones(Funciones funciones);
 	void eliminarFunciones(Long id);
 
-
+	
 }

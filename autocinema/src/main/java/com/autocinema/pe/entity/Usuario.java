@@ -1,18 +1,13 @@
 package com.autocinema.pe.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "usuario")
 public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    
     @Column(name = "id")
     private Long id;
     @Column(name = "nombre")
@@ -23,7 +18,7 @@ public class Usuario {
     private String contrasenia;
     @Column(name = "telefono")
     private String telefono;
-
+    
 	public Usuario() {
 		super();
 	}
@@ -82,7 +77,7 @@ public class Usuario {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", correo=" + correo + ", contrasena=" + contrasenia
 				+ ", telefono=" + telefono + "]";
 	}
-
-
-
+    
+    
+    
 }

@@ -1,7 +1,6 @@
 package com.autocinema.pe.service;
 
 import java.util.List;
-
 import com.autocinema.pe.entity.Pelicula;
 
 public interface PeliculaService {

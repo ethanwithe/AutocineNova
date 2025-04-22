@@ -11,25 +11,25 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "categoria")
 public class Categoria {
-
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    
     @Column(name = "id")
     private Long id;
-
+    
     @Column(name = "nombre")
     private String nombre;
-
+    
     public Categoria() {
 		super();
 	}
-
+    
     public Categoria(Long id,String nombre) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-
+		
 	}
 
 	public Long getId() {
@@ -52,6 +52,6 @@ public class Categoria {
 	public String toString() {
 		return "Categoria [id=" + id + ", nombre=" + nombre + "]";
 	}
-
+ 
 }
 

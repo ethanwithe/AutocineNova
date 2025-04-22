@@ -5,7 +5,7 @@ import java.util.List;
 import com.autocinema.pe.entity.Estacionamiento;
 
 public interface EstacionamientoService {
-
+	
 	List<Estacionamiento> listarEstacionamiento();
 	Estacionamiento getIdEstacionamiento(Long id);
 	void crearActualizarEstacionamiento(Estacionamiento estacionamiento);

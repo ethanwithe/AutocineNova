@@ -1,7 +1,8 @@
 package com.autocinema.pe.entity;
-
-import java.sql.Time;
+import java.time.LocalTime;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -13,35 +14,39 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="funciones")
 public class Funciones {
-
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private Long id;
-
+	
+	
 	@Column(name = "fecha")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date fecha;
-
+	
+	
 	@Column(name = "hora")
-	private Time hora;
+	@DateTimeFormat(pattern = "HH:mm")
+	private LocalTime hora;
 
 	@Column(name = "pelicula_id")
-	private Integer pelicula;
-
+	private Integer pelicula_id;
+	
 	@Column(name = "sala_id")
-	private Integer sala;
+	private Integer sala_id;
 
 	public Funciones() {
 		super();
 	}
 
-	public Funciones(Long id, Date fecha, Time hora, Integer pelicula, Integer sala) {
+	public Funciones(Long id, Date fecha, LocalTime hora, Integer pelicula_id, Integer sala_id) {
 		super();
 		this.id = id;
 		this.fecha = fecha;
 		this.hora = hora;
-		this.pelicula = pelicula;
-		this.sala = sala;
+		this.pelicula_id = pelicula_id;
+		this.sala_id = sala_id;
 	}
 
 	public Long getId() {
@@ -60,37 +65,35 @@ public class Funciones {
 		this.fecha = fecha;
 	}
 
-	public Time getHora() {
+	public LocalTime getHora() {
 		return hora;
 	}
 
-	public void setHora(Time hora) {
+	public void setHora(LocalTime hora) {
 		this.hora = hora;
 	}
 
-	public Integer getPelicula() {
-		return pelicula;
+	public Integer getPelicula_id() {
+		return pelicula_id;
 	}
 
-	public void setPelicula(Integer pelicula) {
-		this.pelicula = pelicula;
+	public void setPelicula_id(Integer pelicula_id) {
+		this.pelicula_id = pelicula_id;
 	}
 
-	public Integer getSala() {
-		return sala;
+	public Integer getSala_id() {
+		return sala_id;
 	}
 
-	public void setSala(Integer sala) {
-		this.sala = sala;
+	public void setSala_id(Integer sala_id) {
+		this.sala_id = sala_id;
 	}
 
 	@Override
 	public String toString() {
-		return "Funciones [id=" + id + ", fecha=" + fecha + ", hora=" + hora + ", pelicula=" + pelicula + ", sala="
-				+ sala + "]";
+		return "Funciones [id=" + id + ", fecha=" + fecha + ", hora=" + hora + ", pelicula_id=" + pelicula_id
+				+ ", sala_id=" + sala_id + "]";
 	}
-
-
-
-
+	
+	
 }
