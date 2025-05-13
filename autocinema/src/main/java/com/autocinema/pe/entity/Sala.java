@@ -20,7 +20,7 @@ public class Sala {
 		super();
 	}
 
-	public Sala(Long id, String nombre, Integer sala_id, Integer capacidad, Integer sede_id) {
+	public Sala(Long id, String nombre, Integer capacidad, Integer sede_id) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -66,4 +66,5 @@ public class Sala {
 	}
 
 	
+    
 }

@@ -1,4 +1,7 @@
 package com.autocinema.pe.entity;
+
+import java.sql.Time;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -20,33 +23,31 @@ public class Funciones {
 	@Column(name = "id")
 	private Long id;
 	
-	
-	@Column(name = "fecha")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
-	private Date fecha;
+	@Column(name = "fecha")
+	private LocalDate fecha;
 	
-	
-	@Column(name = "hora")
 	@DateTimeFormat(pattern = "HH:mm")
+	@Column(name = "hora")
 	private LocalTime hora;
 
 	@Column(name = "pelicula_id")
-	private Integer pelicula_id;
+	private Integer pelicula;
 	
 	@Column(name = "sala_id")
-	private Integer sala_id;
+	private Integer sala;
 
 	public Funciones() {
 		super();
 	}
 
-	public Funciones(Long id, Date fecha, LocalTime hora, Integer pelicula_id, Integer sala_id) {
+	public Funciones(Long id, LocalDate fecha, LocalTime hora, Integer pelicula, Integer sala) {
 		super();
 		this.id = id;
 		this.fecha = fecha;
 		this.hora = hora;
-		this.pelicula_id = pelicula_id;
-		this.sala_id = sala_id;
+		this.pelicula = pelicula;
+		this.sala = sala;
 	}
 
 	public Long getId() {
@@ -57,11 +58,11 @@ public class Funciones {
 		this.id = id;
 	}
 
-	public Date getFecha() {
+	public LocalDate getFecha() {
 		return fecha;
 	}
 
-	public void setFecha(Date fecha) {
+	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
 	}
 
@@ -73,27 +74,29 @@ public class Funciones {
 		this.hora = hora;
 	}
 
-	public Integer getPelicula_id() {
-		return pelicula_id;
+	public Integer getPelicula() {
+		return pelicula;
 	}
 
-	public void setPelicula_id(Integer pelicula_id) {
-		this.pelicula_id = pelicula_id;
+	public void setPelicula(Integer pelicula) {
+		this.pelicula = pelicula;
 	}
 
-	public Integer getSala_id() {
-		return sala_id;
+	public Integer getSala() {
+		return sala;
 	}
 
-	public void setSala_id(Integer sala_id) {
-		this.sala_id = sala_id;
+	public void setSala(Integer sala) {
+		this.sala = sala;
 	}
 
 	@Override
 	public String toString() {
-		return "Funciones [id=" + id + ", fecha=" + fecha + ", hora=" + hora + ", pelicula_id=" + pelicula_id
-				+ ", sala_id=" + sala_id + "]";
+		return "Funciones [id=" + id + ", fecha=" + fecha + ", hora=" + hora + ", pelicula=" + pelicula + ", sala="
+				+ sala + "]";
 	}
 	
 	
+	
+
 }

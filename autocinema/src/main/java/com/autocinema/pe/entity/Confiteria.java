@@ -5,11 +5,12 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "confiteria")
 public class Confiteria {
+	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
     @Column(name = "id")
     private Long id;
+    
     @Column(name = "nombre")
     private String nombre;
     @Column(name = "precio")
@@ -66,6 +67,7 @@ public class Confiteria {
 		return "Confiteria [id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", descripcion=" + descripcion
 				+ "]";
 	}
-	
-	
+    
+    
+    
 }

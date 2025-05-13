@@ -31,8 +31,8 @@ public class FuncionesServiceImpl  implements FuncionesService{
 		fcn.setId(funciones.getId());
 		fcn.setFecha(funciones.getFecha());
 		fcn.setHora(funciones.getHora());
-		fcn.setPelicula_id(funciones.getPelicula_id());
-		fcn.setSala_id(funciones.getSala_id());
+		fcn.setPelicula(funciones.getPelicula());
+		fcn.setSala(funciones.getSala());
 		funcionesRepository.save(fcn);
 	}
 

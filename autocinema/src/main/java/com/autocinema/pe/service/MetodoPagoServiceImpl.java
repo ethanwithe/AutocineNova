@@ -31,11 +31,6 @@ public class MetodoPagoServiceImpl implements MetodoPagoService {
 		MetodoPago mtd = new MetodoPago();
         mtd.setId(metodo.getId());
         mtd.setMetodo(metodo.getMetodo());
-        mtd.setDescripcion(metodo.getDescripcion());
-        mtd.setActivo(metodo.getActivo());
-        mtd.setDatos_tarjeta(metodo.getDatos_tarjeta());
-        mtd.setFecha(metodo.getFecha());
-        
         metodoPagoRepository.save(mtd);
 		
 	}
